@@ -1,4 +1,5 @@
 import express from 'express';
+import productRoutes from "./src/routes/products.js";
 
 //Creo una constante que guarde Express
 const app = express();
