@@ -6,12 +6,12 @@ const router = express.Router();
 
 router
   .route("/")
-  .get(employeeController.getEmployees)
-  .post(employeeController.insertEmployee);
+  .get(employeesController.getEmployees)
+  .post(employeesController.insertEmployee);
 
 router
   .route("/:id")
-  .put(employeeController.updateEmployee)
-  .delete(employeeController.deleteEmployee);
+  .put(employeesController.updateEmployee)
+  .delete(employeesController.deleteEmployee);
 
 export default router;

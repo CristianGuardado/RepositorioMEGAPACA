@@ -3,8 +3,6 @@ import { config } from "./config.js";
 
 mongoose.connect(config.db.URI);
 
-mongoose.connect()
-
 //Comprobar que todo funciona 
 const connection = mongoose.connection;
 

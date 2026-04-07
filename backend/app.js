@@ -15,6 +15,6 @@ app.use("/api/products", productRoutes);
 app.use("/api/branches", branchesRoutes);
 app.use("/api/employees", employeesController);
 app.use("/api/customers", customerRoutes );
-app.use("api/registerCustomer")
+//app.use("api/registerCustomer")
 
 export default app;

@@ -44,4 +44,4 @@ name:{
 },
 );
 
-export default model("Employees", employeeSchema);
+export default model("Employees", employeesSchema);

@@ -8,13 +8,13 @@ const router = express.Router();
 
 router
 .route("/")
-.length(branchesController.getbranches)
+.get(branchesController.getbranches)
 .post(branchesController.insertarBranches);
 
 router
 .route("/:id")
 .put(branchesController.updateBranches)
-.delete(branchesController,deleteBranches);
+.delete(branchesController.deleteBranches);
 
 export default router;
 
