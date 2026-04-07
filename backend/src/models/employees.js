@@ -1,6 +1,14 @@
 /*
-
-*/ 
+Campos:
+    name
+    lastName
+    salary
+    DUI
+    phone
+    email
+    password
+    idBranches
+*/
 
 import mongoose, { Schema, model } from "mongoose";
 
@@ -35,3 +43,5 @@ name:{
     strict: false,
 },
 );
+
+export default model("Employees", employeeSchema);

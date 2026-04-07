@@ -1,13 +1,17 @@
 import express from "express";
 import employeesController from "../controllers/employeesController.js";
 
-//utilizar ROuter()
+//Utilizo Router()
 const router = express.Router();
 
 router
-.route("/")
-.get(employeesController.getEmployees)
-.post(employeesController.insertEmployee);
+  .route("/")
+  .get(employeeController.getEmployees)
+  .post(employeeController.insertEmployee);
 
 router
-.route("/:id")
+  .route("/:id")
+  .put(employeeController.updateEmployee)
+  .delete(employeeController.deleteEmployee);
+
+export default router;
