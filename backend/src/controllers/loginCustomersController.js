@@ -54,8 +54,14 @@ try{
 
             await customerFound.save();
 
-            return res.status(403).json({message: "Cuenta bloqueada por multiples intentos fallidos"})
+            return res
+            .status(403)
+            .json({message: "Cuenta bloqueada por multiples intentos fallidos"});
         }
+
+        await customerFound.save();
+
+        return res.status(401).json({message: "Contraseña incorrecta"})
     }
 
 

@@ -73,7 +73,7 @@ isVerified
             from: config.email.user_email,
             to:email,
             subject: "Verificacion de cuenta",
-            text: "Para verificar tu ceunta, utliziza est cofigo:"
+            text: "Para verificar tu cuenta, utiliziza este codigo: "
             + randomNumber + "Expira en 15 minutos"
         }
 
@@ -95,6 +95,8 @@ isVerified
 //VERIFICAR EL CODIGO QUE ACAMOS DE ENVIAR 
 registerCustomerController.verifyCode = async (req, res) => {
     try{
+
+        const {verificationCodeRequest} = req.body
         //Solicitamos el codigo que escribieron en el frontend
         const token = req.cookies.resgitrationCookie
 
