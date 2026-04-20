@@ -98,11 +98,12 @@ registerCustomerController.verifyCode = async (req, res) => {
 
         const {verificationCodeRequest} = req.body
         //Solicitamos el codigo que escribieron en el frontend
-        const token = req.cookies.resgitrationCookie
+        const token = req.cookies.resgistrationCookie
 
         //Extraer toda la informacion del token
         const decoded = jsonwebtoken.verify(token, config.JWT.secret);
         const{
+            randomNumber: storedCode,
              name,
              lastName,
             birthdate,
