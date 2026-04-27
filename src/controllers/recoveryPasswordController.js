@@ -95,7 +95,7 @@ recoveryPasswordController.verifyCode = async (req, res) => {
 
 
         //Ahora comparo el codigo que el usuario escribio con el que esta dentro del teokne
-        if(code !== decoded,randomCode){
+        if(code !== decoded.randomCode){
                 return res.status(400).json({message: "Invalid code"})
         }
 
